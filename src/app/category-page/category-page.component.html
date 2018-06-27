@@ -1,0 +1,15 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Category</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" *ngFor="let category of categories"
+         [class.selected]="category === selectedCategory"
+      (click)="onCategorySelected(category)">{{category}}</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <app-category-items class="container" [category]="selectedCategory">
+
+    </app-category-items>
+  </main>
+</div>

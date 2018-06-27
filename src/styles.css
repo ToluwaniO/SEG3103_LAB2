@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}

@@ -1,0 +1,9 @@
+<div *ngIf="book" class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title" style="background: url({{book.imageUrl}})">
+    <h2 class="mdl-card__title-text">{{book.title}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">{{book.description}}</div>
+  <div class="mdl-card__actions mdl-card--border">
+    <span class="author">by {{book.author}}</span>
+  </div>
+</div>
