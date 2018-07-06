@@ -16,8 +16,8 @@ export class CategoryItemsComponent implements OnInit {
   ngOnInit() {
     this.books = CATEGORY_BOOKS[this.category];
   }
-  url(book: Book): string {
-    return `url(${book.imageurl})`;
-  }
+  // url(book: Book): string {
+  //   return `url(${book.imageurl})`;
+  // }
 
 }

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { CATEGORIES } from './mock-data';
+import {Component, OnInit} from '@angular/core';
+import {JsonConvert, OperationMode, ValueCheckingMode} from "json2typescript"
+import {Books} from "./Books";
+
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { CATEGORIES } from './mock-data';
 })
 export class AppComponent {
   title = 'app';
-  categories = CATEGORIES;
+  // categories = CATEGORIES;
   selectedCategory: string;
   onCategorySelected(category: string) {
     this.selectedCategory = category;

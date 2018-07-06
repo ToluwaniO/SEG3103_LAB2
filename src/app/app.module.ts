@@ -13,6 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
+import { BooksComponent } from './books/books.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {MatInputModule} from '@angular/material/input';
     CategoryItemsComponent,
     BookCardItemComponent,
     BookCardsComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,
