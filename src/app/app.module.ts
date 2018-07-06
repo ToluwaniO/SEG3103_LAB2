@@ -18,6 +18,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { BookPageComponent } from './book-page/book-page.component';
 import { SearchComponent } from './search/search.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -32,6 +33,7 @@ import { CartComponent } from './cart/cart.component';
     BookPageComponent,
     SearchComponent,
     CartComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
