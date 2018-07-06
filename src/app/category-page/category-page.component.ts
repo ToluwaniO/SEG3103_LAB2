@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CATEGORIES } from '../mock-data';
+import {BooksService} from '../books.service';
 
 @Component({
   selector: 'app-category-page',
@@ -11,7 +12,7 @@ export class CategoryPageComponent implements OnInit {
   categories = CATEGORIES;
   selectedCategory: string;
 
-  constructor() { }
+  constructor(private bookService: BooksService) { }
 
   ngOnInit() {
     console.log(`${this.TAG} -> ${this.selectedCategory}`);

@@ -1,9 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Book} from '../Book';
 import {ActivatedRoute} from '@angular/router';
-import {CATEGORY_BOOKS} from '../mock-data';
 import { Location } from '@angular/common';
-import {Subscription} from 'rxjs';
+import {BooksService} from '../books.service';
+import {description} from '../mock-data';
 
 @Component({
   selector: 'app-book-page',
@@ -12,9 +12,12 @@ import {Subscription} from 'rxjs';
 })
 export class BookPageComponent implements OnInit {
   @Input() book: Book;
+  description: string;
   private TAG: string = BookPageComponent.name;
 
-  constructor(private route: ActivatedRoute, private location: Location) { }
+  constructor(private bookService: BooksService, private route: ActivatedRoute, private location: Location) {
+    this.description = description;
+  }
 
   ngOnInit() {
     this.getBook();
@@ -22,12 +25,16 @@ export class BookPageComponent implements OnInit {
 
   getBook() {
     const genre: string = this.route.snapshot.paramMap.get('genre');
-    const id: number = +this.route.snapshot.paramMap.get('id');
-    const book = CATEGORY_BOOKS[genre][id];
-    console.log(`${this.TAG} -> ${book}`);
-    this.book = book;
+    const name: string = this.route.snapshot.paramMap.get('name');
+    this.bookService.getBookByCategory(genre).forEach(b => {
+      if (b.title === name) {
+        this.book = b;
+      }
+    });
+    console.log(`${this.TAG} -> ${this.book}`);
   }
   addToCart(book: Book) {
+    this.bookService.addToCart(this.book);
   }
 
 }

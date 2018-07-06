@@ -1,38 +1,38 @@
-import {JsonObject, JsonProperty} from "json2typescript";
+import {JsonObject, JsonProperty} from 'json2typescript';
 
 @JsonObject
 export class Book {
 
-  @JsonProperty("author", String)
+  @JsonProperty('author', String)
   _author: string = undefined;
-  get author(){return this._author}
+  get author() {return this._author; }
 
-  @JsonProperty("country", String)
+  @JsonProperty('country', String)
   _country: string = undefined;
-  get country(){return this._country}
+  get country() {return this._country; }
 
-  @JsonProperty("imageLink", String)
+  @JsonProperty('imageLink', String)
   _imageLink: string = undefined;
-  get imageLink(){return this._imageLink}
+  get imageLink() {return this._imageLink; }
 
-  @JsonProperty("language", String)
+  @JsonProperty('language', String)
   _language: string = undefined;
-  get language(){return this._language}
+  get language() {return this._language; }
 
-  @JsonProperty("link", String)
+  @JsonProperty('link', String)
   _link: string = undefined;
-  get link(){return this._link}
+  get link() {return this._link; }
 
-  @JsonProperty("pages", Number)
+  @JsonProperty('pages', Number)
   private _pages: number = undefined;
   get pages() { return this._pages; }
 
 
-  @JsonProperty("title", String)
+  @JsonProperty('title', String)
   _title: string = undefined;
-  get title(){return this._title}
+  get title() {return this._title; }
 
-  @JsonProperty("year", Number)
+  @JsonProperty('year', Number)
   private _year: number = undefined;
   get year() { return this._year; }
 
