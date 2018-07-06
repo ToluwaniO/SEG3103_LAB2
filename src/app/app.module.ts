@@ -14,6 +14,10 @@ import {MatMenuModule} from '@angular/material/menu';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { BooksComponent } from './books/books.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { BookPageComponent } from './book-page/book-page.component';
+import { SearchComponent } from './search/search.component';
+
 
 
 @NgModule({
@@ -24,6 +28,8 @@ import { BooksComponent } from './books/books.component';
     BookCardItemComponent,
     BookCardsComponent,
     BooksComponent,
+    BookPageComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,8 @@ import { BooksComponent } from './books/books.component';
     MatIconModule,
     MatMenuModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
