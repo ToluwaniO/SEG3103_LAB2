@@ -3,7 +3,7 @@ import {Book} from '../Book';
 import {ActivatedRoute} from '@angular/router';
 import { Location } from '@angular/common';
 import {BooksService} from '../books.service';
-import {description} from '../mock-data';
+import {description_long} from '../mock-data';
 
 @Component({
   selector: 'app-book-page',
@@ -16,7 +16,7 @@ export class BookPageComponent implements OnInit {
   private TAG: string = BookPageComponent.name;
 
   constructor(private bookService: BooksService, private route: ActivatedRoute, private location: Location) {
-    this.description = description;
+    this.description = description_long;
   }
 
   ngOnInit() {
@@ -35,6 +35,11 @@ export class BookPageComponent implements OnInit {
   }
   addToCart(book: Book) {
     this.bookService.addToCart(this.book);
+  }
+  getPath(book: Book) {
+    const path = `assets/${book.imageLink}`;
+    console.log(path);
+    return path;
   }
 
 }
