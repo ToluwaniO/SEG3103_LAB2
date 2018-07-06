@@ -16,7 +16,13 @@
         </div>
       </div>
       <button class="mdl-button mdl-js-button mdl-button--icon" routerLink="/cart">
-        <i class="material-icons mdl-badge">shopping_cart</i>
+        <ng-container *ngIf="cartItems.length > 0; else noBadge">
+          <i class="material-icons mdl-badge" data-badge="">shopping_cart</i>
+        </ng-container>
+        <ng-template #noBadge>
+          <i class="material-icons">shopping_cart</i>
+        </ng-template>
+
       </button>
     </div>
   </header>

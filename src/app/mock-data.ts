@@ -3,6 +3,12 @@ import {Books} from './Books';
 
 export const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus tortor, consectetur ut semper at.' +
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus tortor, consectetur ut semper at.';
+export const description_long = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus tortor, consectetur ut semper at.' +
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus tortor, consectetur ut semper at.' +
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus tortor, consectetur ut semper at.' +
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus tortor, consectetur ut semper at.' +
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus tortor, consectetur ut semper at.' +
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tellus tortor, consectetur ut semper at.';
 export const CATEGORIES: string[] = ['Fiction', 'History', 'Biographies & Memoirs', 'Politics'];
 const jsonObject: object = {
   'dataSet': '100',
