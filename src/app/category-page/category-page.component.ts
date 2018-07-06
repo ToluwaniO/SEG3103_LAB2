@@ -9,7 +9,7 @@ import { CATEGORIES } from '../mock-data';
 export class CategoryPageComponent implements OnInit {
   TAG = 'category-page';
   categories = CATEGORIES;
-  selectedCategory = this.categories[0];
+  selectedCategory: string;
 
   constructor() { }
 
@@ -20,8 +20,8 @@ export class CategoryPageComponent implements OnInit {
   }
 
   onCategorySelected(category: string) {
-    console.log(`${this.TAG} -> onCategorySelected= ${this.selectedCategory}`);
     this.selectedCategory = category;
+    console.log(`${this.TAG} -> onCategorySelected= ${this.selectedCategory}`);
   }
 
 }
