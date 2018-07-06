@@ -16,3 +16,6 @@
   color: deepskyblue;
   font-size: small;
 }
+a {
+  text-decoration: none;
+}

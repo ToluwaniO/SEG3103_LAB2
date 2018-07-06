@@ -5,23 +5,16 @@
       <span class="mdl-layout-title">Books</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
+
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+        <i routerLink="/search" class="material-icons">search</i>
+      </button>
+      <button class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">shopping_cart</i>
+      </button>
     </div>
   </header>
   <main class="mdl-layout__content">
-    <app-category-page></app-category-page>
+    <router-outlet></router-outlet>
   </main>
 </div>
-
-<!--<mat-toolbar class="header">-->
-  <!--<mat-icon [matMenuTriggerFor]="menu">menu</mat-icon>-->
-  <!--<mat-menu #menu="matMenu">-->
-    <!--<button *ngFor="let category of categories" mat-menu-item-->
-            <!--(click)="onCategorySelected(category)">{{category}}</button>-->
-  <!--</mat-menu>-->
-
-  <!--<h3 class="title">Books</h3>-->
-<!--</mat-toolbar>-->
-
-<!--<app-category-page [category]="selectedCategory">-->
-
-<!--</app-category-page>-->
