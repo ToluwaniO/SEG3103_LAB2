@@ -1,0 +1,23 @@
+<div *ngIf="book" class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col">
+    <img src="{{book.imageurl}}">
+  </div>
+
+  <div class="mdl-cell mdl-cell--8-col">
+    <h3 class="title">{{book.title}}</h3>
+    <h5 class="author"> by {{book.author}}</h5>
+    <h6 class="price">$10.00</h6>
+    <div>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent add_to_cart"
+      (click)="addToCart(book)">
+        ADD TO CART
+      </button>
+    </div>
+    <p class="description">{{book.description}}</p>
+  </div>
+</div>
+
+<div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
+</div>

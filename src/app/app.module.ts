@@ -15,6 +15,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import { AppRoutingModule } from './/app-routing.module';
 import { BookPageComponent } from './book-page/book-page.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { BookPageComponent } from './book-page/book-page.component';
     BookCardItemComponent,
     BookCardsComponent,
     BookPageComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
