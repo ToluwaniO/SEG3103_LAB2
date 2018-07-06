@@ -2,12 +2,6 @@ import {JsonObject, JsonProperty} from "json2typescript";
 
 @JsonObject
 export class Book {
-<<<<<<< HEAD
-  // title: string;
-  // author: string;
-  // description: string;
-  // imageurl: string;
-
 
   @JsonProperty("author", String)
   _author: string = undefined;
@@ -42,13 +36,4 @@ export class Book {
   private _year: number = undefined;
   get year() { return this._year; }
 
-
-=======
-  id: number;
-  title: string;
-  author: string;
-  description: string;
-  imageurl: string;
-  genre: string;
->>>>>>> 7b4235bdff7bb39b7884dbd0f1340b8f73b5f829
 }
