@@ -1,23 +1,33 @@
-import {Component, Input, OnInit} from '@angular/core';
-import { CATEGORY_BOOKS } from '../mock-data';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Book} from '../Book';
+import {description} from '../mock-data';
+import {BooksService} from '../books.service';
 
 @Component({
   selector: 'app-category-items',
   templateUrl: './category-items.component.html',
   styleUrls: ['./category-items.component.css']
 })
-export class CategoryItemsComponent implements OnInit {
+export class CategoryItemsComponent implements OnInit, OnChanges {
   @Input() category: string;
+  description: string;
   books: Book[];
 
-  constructor() { }
+  constructor(private bookService: BooksService) {this.description = description; }
 
   ngOnInit() {
-    this.books = CATEGORY_BOOKS[this.category];
+    this.getBooks();
   }
-  // url(book: Book): string {
-  //   return `url(${book.imageurl})`;
-  // }
+  getBooks() {
+    this.books = this.bookService.getBookByCategory(this.category);
+  }
+
+  url(book: Book): string {
+    return `url(assets/${book.imageLink})`;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.getBooks();
+  }
 
 }

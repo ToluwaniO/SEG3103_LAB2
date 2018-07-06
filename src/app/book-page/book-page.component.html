@@ -1,6 +1,6 @@
 <div *ngIf="book" class="mdl-grid">
   <div class="mdl-cell mdl-cell--4-col">
-    <img src="{{book.imageurl}}">
+    <img src="/assets/images/{{book.imageLink}}">
   </div>
 
   <div class="mdl-cell mdl-cell--8-col">
@@ -13,7 +13,7 @@
         ADD TO CART
       </button>
     </div>
-    <p class="description">{{book.description}}</p>
+    <p class="description">{{description}}</p>
   </div>
 </div>
 
