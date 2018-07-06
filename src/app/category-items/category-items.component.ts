@@ -29,5 +29,8 @@ export class CategoryItemsComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     this.getBooks();
   }
+  addToCart(book: Book) {
+    this.bookService.addToCart(book);
+  }
 
 }
